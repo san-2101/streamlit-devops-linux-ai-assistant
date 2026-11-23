@@ -1,0 +1,30 @@
+cd streamlit-devops-linux-ai-assistant/
+ls
+sudo apt install bash
+sudo apt update && sudo apt install python3 python3-venv -y
+python3 -m venv venv
+source venv/bin/activate
+bash pip install -r requirements.txt
+pip install --upgrade pip
+mkdir -p utils
+pip install -r requirements.txt
+streamlit run app.py
+nano .env
+bash streamlit run app.py
+streamlit run app.py
+ufw allow 8501
+sudo ufw allow 8501
+streamlit run app.py
+mv prockfile Procfile
+vim Procfile
+vim app.py
+cat requirements.txt
+zip -r devops-ai-assistant.zip . -x "venv/*" -x ".env" -x ".git/*" -x "devops-ai-assistant.zip" -x "__pycache__/*" -x "*.pyc"
+sudo apt install zip unzip -y
+zip -r devops-ai-assistant.zip . -x "venv/*" -x ".env" -x ".git/*" -x "devops-ai-assistant.zip" -x "__pycache__/*" -x "*.pyc"
+unzip -l devops-ai-assistant.zip
+source venv/bin/activate
+streamlit run app.py
+cat -A Procfile
+vim Procfile
+
