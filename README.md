@@ -65,3 +65,88 @@ Configure GROQ_API_KEY and ELEVENLABS_API_KEY in Configuration > Software > Envi
 
 ## 📄 License
 This project is licensed under the MIT License.
+
+
+Phase 2: Create AWS Elastic Beanstalk environment
+Step 7. Open AWS Elastic Beanstalk
+Open:
+AWS Elastic Beanstalk Console
+
+
+
+
+
+
+
+hackmd.io
+
+
+1. Sign in to your AWS account.
+2. Select your AWS Region. For example, ap-south-1 (Mumbai).
+3. Click Create application.
+Step 8. Configure the application
+Use these settings:
+Setting	Value
+Application name	devops-ai-assistant
+Environment tier	Web server environment
+Environment name	devops-ai-assistant-env
+Platform	Python
+Platform branch	Python 3.10, if available
+Application code	Upload your code
+
+
+
+
+
+
+
+
+
+adex.ltd
+
+
+Choose the currently available Python platform version compatible with your dependencies.
+Step 9. Upload your ZIP file
+Under Application code:
+1. Select Upload your code.
+2. Select Local file.
+3. Click Choose file.
+4. Select devops-ai-assistant.zip.
+5. Click Create environment.
+
+
+
+
+
+
+
+
+dev.to
+
+
+AWS will provision the environment and deploy this application.
+
+This may take several minutes.
+Phase 3: Configure API keys
+Step 10. Configure environment properties
+After your environment is created:
+1. Open Elastic Beanstalk.
+2. Select devops-ai-assistant-env.
+3. Go to Configuration.
+4. Find Updates, monitoring, and logging or the software configuration section, depending on the console layout.
+5. Click Edit.
+6. Find Environment properties.
+Add these three properties:
+Environment properties
+PROPERTY 1
+GROQ_API_KEY
+Required
+Value: Your actual Groq API key
+PROPERTY 2
+ELEVENLABS_API_KEY
+Required
+Value: Your actual ElevenLabs API key
+PROPERTY 3
+PORT
+Value: 8080
+Click Apply to save the configuration.
